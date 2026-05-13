@@ -36,7 +36,7 @@ export default function Gallery() {
                     </h2>
 
                     <p className="mt-4 text-gray-400 text-lg">
-                        Real before and after rtransformations from completed projects.
+                        Real before and after transformations from completed projects.
                     </p>
                 </div>
 

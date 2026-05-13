@@ -6,7 +6,8 @@ import StickyCTA from "@/components/StickyCTA";
 
 export const metadata: Metadata = {
   title: "Auto Paint & Body",
-  description: "Professional auto paint and body repair services",
+  description: 
+    "Professional auto paint and body repair in Buford, GA. Collision repair, paint matching, dent repair, bumper repair, and restorations."
 };
 
 export default function RootLayout({

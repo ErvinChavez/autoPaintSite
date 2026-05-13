@@ -1,5 +1,3 @@
-import { describe } from "node:test";
-
 const services = [
     {
         title:"Collision Repair",
@@ -31,36 +29,39 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="px-6 py-20 bg-gray-50">
+        <section id="services" className="bg-black px-6 py-24">
+
             <div className="max-w-6xl mx-auto">
 
                 {/* Header */}
                 <div className="text-center mb-14">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+                    <h2 className="text-4xl md:text-5xl font-black text-white">
                         Our Services
                     </h2>
 
-                    <p className="mt-4 text-lg text-gray-600">
+                    <p className="mt-4 text-gray-400 text-lg">
                         Professional auto body and paint services focused on quality,
                         precision, and customer satisfaction.
                     </p>
                 </div>
 
                 {/* Service Card */}
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {services.map((service, index) => (
+                <div className="grid gap-6 md:grid-cols-3">
+                    {services.map((service) => (
                         <div
-                            key={index}
-                            className="bg-white rounded-2xl p-6 shadow-sm border"
+                            key={service.title}
+                            className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition"
                         >
-                            <h3 className="text-2xl font-semibold text-gray-900">
+                            <h3 className="text-xl font-bold text-white">
                                 {service.title}
                             </h3>
-                            <p className="mt-3 text-gray-600 leading-relaxed">
+
+                            <p className="mt-3 text-gray-400 leading-relaxed">
                                 {service.description}
                             </p>
                         </div>
                     ))}
+
                 </div>
 
             </div>

@@ -25,69 +25,70 @@ const galleryImages = [
 
 export default function Gallery() {
     return (
-        <section className="px-6 py-20 bg-white">
+        <section id="gallery" className="bg-black px-6 py-24">
+
             <div className="max-w-6xl mx-auto">
 
-                {/* Section Header */}
-                <div className="text-center mb-14">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-black text-white">
                         Recent Work
                     </h2>
-                    <p className="mt-4 text-gray-600 text-lg">
-                        Real before and after results from completed projects.
+
+                    <p className="mt-4 text-gray-400 text-lg">
+                        Real before and after rtransformations from completed projects.
                     </p>
                 </div>
 
-                {/* Gallery Grid */}
-                <div className="grid gap-12">
+                {/* Gallery */}
+                <div className="space-y-20">
+
                     {galleryImages.map((item) => (
-                        <div
-                            key={item.title}
-                            className="grid md:grid-cols-2 gap-6 items-center"
-                        >
-
-                            {/* Before */}
-                            <div>
-                                <p className="mb-2 font-semibold text-gray-700">
-                                    Before
-                                </p>
-
-                                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-md">
-                                    <Image
-                                        src={item.before}
-                                        alt={`${item.title} before`}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* After */}
-                            <div>
-                                <p className="mb-2 font-semibold text-gray-700">
-                                    After
-                                </p>
-
-                                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-md">
-                                    <Image
-                                        src={item.after}
-                                        alt={`${item.title} after`}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
+                        <div key={item.title} className="space-y-6">
 
                             {/* Title */}
-                            <div className="md:col-span-2 text-center">
-                                <h3 className="text-2xl font-semibold text-gray-900">
-                                    {item.title}
-                                </h3>
+                            <h3 className="text-xl md:text-2xl font-semibold text-white text-center">
+                                {item.title}
+                            </h3>
+
+                            {/* Before / After */}
+                            <div className="grid md:grid-cols-2 gap-6">
+
+                                {/* Before */}
+                                <div>
+                                    <p className="text-sm text-gray-400 mb-2">Before</p>
+
+                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10">
+                                        <Image
+                                            src={item.before}
+                                            alt={`${item.title} before`}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* After */}
+                                <div>
+                                    <p className="text-sm text-sky-400 mb-2">After</p>
+
+                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10">
+                                        <Image
+                                            src={item.after}
+                                            alt={`${item.title} after`}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </div> 
+
                             </div>
+
                         </div>
                     ))}
+
                 </div>
 
             </div>

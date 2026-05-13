@@ -1,54 +1,52 @@
 import { BUSINESS } from "@/lib/constants";
+import { MdCall } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <section className="px-6 py-20 bg-black text-white">
+        <section id="contact" className="bg-black px-6 py-24">
             <div className="max-w-4xl mx-auto text-center">
 
                 {/* Heading */}
-                <h2 className="text-3xl md:text-5xl font-bold">
+                <h2 className="text-4xl md:text-5xl font-black text-white">
                     Get Your Free Estimate
                 </h2>
 
-                {/* Subtext */}
-                <p className="mt-4 text-lg text-gray-300">
-                    Call or text us today for fast quotes and professional
-                    auto body repair services
+                <p className="mt-4 text-gray-400 text-lg">
+                    Contact Chris today for fast quotes and professional auto body repair.
                 </p>
 
-                {/* CTA Buttons */}
-                <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                {/* CTA Cards */}
+                <div className="mt-12 grid gap-6 md:grid-cols-3">
 
                     {/* Call */}
                     <a 
                         href={`tel:${BUSINESS.phone}`}
-                        className="bg-white text-black px-6 py-4 rounded-xl font-semibold text-lg hover:bg-gray-200 transition"
+                        className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 transition"
                     >
-                        Call Now
+                        <MdCall className="text-3xl text-sky-400 mx-auto"/>
+                        <p className="mt-3 text-white font-semibold">Call Now</p>
                     </a>
 
-                    {/* Text */}
+                    {/* Instagram */}
                     <a 
-                        href={`sms:${BUSINESS.phone}`}
-                        className="bg-blue-600 text-white px-6 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition"
-                    >
-                        Text for Quote
-                    </a>
-                </div>
-
-                {/* Contact Info */}
-                <div className="mt-10 space-y-2 text-gray-300">
-                    <a
                         href={BUSINESS.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-4 flex items-center justify-center hover:bg-gray-100 transition"
+                        className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 transition"
                     >
-                    <FaInstagram className="text-xl" />
+                        <FaInstagram className="text-3xl text-sky-400 mx-auto" />
+                        <p className="mt-3 text-white font-semibold">Instagram</p>
                     </a>
+
                 </div>
+
+                {/* Footer note */}
+                <p className="mt-10 text-sm text-gray-500">
+                    Park Auto Paint & Body • Buford, GA
+                </p>
+
             </div>
         </section>
-    )
+    );
 }

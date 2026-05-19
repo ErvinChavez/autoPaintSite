@@ -24,6 +24,11 @@ const services = [
         description:
             "Correct faded paint, swirl marks, and imperfections for a refreshed appearance.",
     },
+    {
+        title: "Full Mechanical Repairs",
+        description: 
+            "Professional mechanical repair services to keep your vehicle running safely, reliably, and at peak performance."
+    }
    
 ];
 

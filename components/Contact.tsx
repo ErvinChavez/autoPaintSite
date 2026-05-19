@@ -46,6 +46,13 @@ export default function Contact() {
                     Park Auto Paint & Body • Buford, GA
                 </p>
 
+                <a
+                    href="/privacy-policy"
+                    className="inline-block text-sm text-gray-600 hover:text-white transition"
+                >
+                    Privacy Policy
+                </a>
+
             </div>
         </section>
     );

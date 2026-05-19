@@ -5,7 +5,7 @@ import { BsChatDotsFill } from "react-icons/bs";
 
 export default function StickyCTA() {
     return (
-        <div className="fixed bottom-0 left-0 w-full z-50 px-4 pb-4">
+        <div className="fixed bottom-4 left-0 w-full z-50 px-4">
 
             <div className="max-w-2xl mx-auto">
 

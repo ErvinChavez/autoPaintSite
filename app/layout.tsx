@@ -23,7 +23,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* Page Content */}
-        <main className="pb-[96px]">
+        <main>
           {children}
         </main>
         

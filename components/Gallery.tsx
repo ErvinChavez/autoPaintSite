@@ -6,16 +6,7 @@ const galleryImages = [
         after:"/classicAfter.jpg",
         title:"Full Paint & Body Restoration",
     },
-    {
-        before:"/infinitiBefore.jpg",
-        after:"/infinitiAfter.jpg",
-        title:"Rear Bumper & Dent Repair",
-    },
-    {
-        before:"/bmwBefore.jpg",
-        after:"/bmwAfter.jpg",
-        title:"Chip Paint Restoration",
-    },
+    
     {
         before:"/kiaBefore.jpg",
         after:"/kiaAfter.jpg",

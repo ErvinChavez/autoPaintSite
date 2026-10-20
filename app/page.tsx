@@ -5,11 +5,11 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Services />
       <Gallery />
       <Contact />
-    </main>
+    </>
   );
 }

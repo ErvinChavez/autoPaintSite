@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 import StickyCTA from "@/components/StickyCTA";
 
 export const metadata: Metadata = {
-  title: "Auto Paint & Body",
+  title: "Park Auto Paint | Auto Body & Paint Repair in Gwinnett County, GA",
   description: 
-    "Professional auto paint and body repair in Buford, GA. Collision repair, paint matching, dent repair, bumper repair, and restorations."
+    "Veteran-owned auto body and paint repair serving Gwinnett County and the surrounding Atlanta area. Collision repair, paint matching, dent repair, bumper repair, and restorations."
 };
 
 export default function RootLayout({

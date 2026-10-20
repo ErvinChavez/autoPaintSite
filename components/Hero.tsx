@@ -20,7 +20,7 @@ export default function Hero() {
 
                 {/* Small Tag */}
                 <p className="text-sky-400 font-semibold tracking-[0.25em] uppercase">
-                    Park Auto Paint & Body
+                    {BUSINESS.name}
                 </p>
                 
                 {/* Main Heading */}

@@ -13,7 +13,7 @@ export default function Contact() {
                 </h2>
 
                 <p className="mt-4 text-gray-400 text-lg">
-                    Contact Chris today for fast quotes and professional auto body repair.
+                    Contact us today for fast quotes and professional auto body repair.
                 </p>
 
                 {/* CTA Cards */}
@@ -43,7 +43,7 @@ export default function Contact() {
 
                 {/* Footer note */}
                 <p className="mt-10 text-sm text-gray-500">
-                    Park Auto Paint & Body • Buford, GA
+                    {BUSINESS.name} • Serving {BUSINESS.serviceArea}.
                 </p>
 
                 <a

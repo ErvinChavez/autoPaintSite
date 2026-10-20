@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
                         </h2>
 
                         <p>
-                            Park Auto Paint & Body may collect information you voluntarily provide when contacting us through phone calls, text messages, Instagram, or other communication methods.
+                            Park Auto Paint may collect information you voluntarily provide when contacting us through phone calls, text messages, Instagram, or other communication methods.
                         </p>
                     </div>
 
@@ -55,12 +55,12 @@ export default function PrivacyPolicyPage() {
                         </h2>
 
                         <p>
-                            If you have questions regarding this Privacy Policy, please contact Park Auto Paint & Body directly.
+                            If you have questions regarding this Privacy Policy, please contact Park Auto Paint directly.
                         </p>
                     </div>
 
                     <div className="pt-8 border-t border-white/10 text-sm text-gray-500">
-                        Last updated: May 2026
+                        Last updated: October 2026
                     </div>
 
                 </div>

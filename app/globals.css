@@ -1,23 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Brand colors: use as bg-paper, text-ink, bg-park-blue, etc. */
+@theme {
+  --color-paper: #ffffff;
+  --color-ink: #1b1f24;
+  --color-steel: #5b6470;
+  --color-primer: #eef1f4;
+  --color-park-blue: #1f5fbf;
+  --color-park-blue-dark: #194e9e;
+  --color-tape: #f2c230;
 }
 
-/* Remove system theme switching (you don’t need it) */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Fonts come from next/font in layout.tsx, so they use "inline" */
+@theme inline {
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow-condensed), var(--font-barlow), ui-sans-serif, sans-serif;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-bold leading-tight;
+  }
+
+  /* Visible outline for keyboard users only */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-park-blue;
+  }
 }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Turn off smooth scrolling for people who ask their device for less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

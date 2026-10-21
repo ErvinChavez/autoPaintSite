@@ -15,7 +15,7 @@ export default function Navbar() {
 
                 {/* Brand */}
                 <div className="text-white font-black text-lg tracking-wide">
-                    Park Auto
+                    {BUSINESS.name}
                 </div>
 
                 {/* Desktop Nav */}

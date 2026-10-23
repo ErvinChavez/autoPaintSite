@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import StickyCTA from "@/components/StickyCTA";
+import Footer from "@/components/Footer";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -41,7 +42,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        
+        <Footer />
         {/* Sticky CTA */}
         <StickyCTA />
       

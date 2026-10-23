@@ -1,58 +1,56 @@
+import Link from "next/link";
 import { BUSINESS } from "@/lib/constants";
 import { FaInstagram } from "react-icons/fa";
-import { MdCall } from "react-icons/md";
+import { MdCall, MdEventAvailable } from "react-icons/md";
 import { BsChatDotsFill } from "react-icons/bs";
 
 export default function StickyCTA() {
     return (
-        <div className="fixed bottom-4 left-0 w-full z-50 px-4">
+        <nav
+            aria-label="Quick contact"
+            className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-paper border-t border-ink/10 shadow-[0_-4px_16px_rgba(27,31,36,0.08)] pb-[env(safe-area-inset-bottom)]"
+        >
+            <div className="grid grid-cols-4 text-ink">
 
-            <div className="max-w-2xl mx-auto">
+                {/* Call */}
+                <a
+                    href={`tel:${BUSINESS.phone}`}
+                    className="flex flex-col items-center justify-center py-3"
+                >
+                    <MdCall aria-hidden="true" className="text-2xl text-park-blue" />
+                    <span className="text-xs mt-1 font-semibold">Call</span>
+                </a>
 
-                <div className="bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
+                {/* Text */}
+                <a
+                    href={`sms:${BUSINESS.phone}`}
+                    className="flex flex-col items-center justify-center py-3"
+                >
+                    <BsChatDotsFill aria-hidden="true" className="text-xl text-park-blue" />
+                    <span className="text-xs mt-1 font-semibold">Text</span>
+                </a>
 
-                    <div className="grid grid-cols-4 text-white">
+                {/* Book */}
+                <Link
+                    href="/book"
+                    className="flex flex-col items-center justify-center py-3 bg-park-blue text-white"
+                >
+                    <MdEventAvailable aria-hidden="true" className="text-2xl" />
+                    <span className="text-xs mt-1 font-semibold">Book</span>
+                </Link>
 
-                        {/* Call */}
-                        <a
-                            href={`tel:${BUSINESS.phone}`}
-                            className="flex flex-col items-center justify-center py-4 hover:bg-white/10 rounded-l-2xl transition"
-                        >
-                            <MdCall className="text-2xl text-sky-400"/>
-                            <span className="text-xs mt-1 font-medium">
-                            Call 
-                            </span>
-                        </a>
+                {/* Instagram */}
+                <a
+                    href={BUSINESS.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center py-3"
+                >
+                    <FaInstagram aria-hidden="true" className="text-2xl text-park-blue" />
+                    <span className="text-xs mt-1 font-semibold">Instagram</span>
+                </a>
 
-                        {/* Text */}
-                        <a
-                            href={`sms:${BUSINESS.phone}`}
-                            className="flex flex-col items-center justify-center py-4 hover:bg-white/10 transition"
-                        >
-                            <BsChatDotsFill className="text-xl text-sky-400" />
-                            <span className="text-xs mt-1 font-medium">
-                                Text
-                            </span>
-                        </a>
-
-                        {/* Instagram */}
-                        <a
-                            href={BUSINESS.instagram}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-col items-center justify-center py-4 hover:bg-white/10 rounded-r-2xl transition"
-                        >
-                            <FaInstagram className="text-2xl text-sky-400" />
-                            <span className="text-xs mt-1 font-medium">
-                                Instagram
-                            </span>
-                        </a>
-
-                    </div>
-                </div>
-
-                
             </div>
-        </div>
+        </nav>
     );
 }

@@ -41,18 +41,6 @@ export default function Contact() {
 
                 </div>
 
-                {/* Footer note */}
-                <p className="mt-10 text-sm text-gray-500">
-                    {BUSINESS.name} • Serving {BUSINESS.serviceArea}.
-                </p>
-
-                <a
-                    href="/privacy-policy"
-                    className="inline-block text-sm text-gray-600 hover:text-white transition"
-                >
-                    Privacy Policy
-                </a>
-
             </div>
         </section>
     );
